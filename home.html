@@ -28,7 +28,7 @@
 
                         <div class="stats shadow">
                             <div class="stat">
-                                <div class="stat-value">89400</div>
+                                <div id="currentMoney" class="stat-value">89400</div>
                                 <div class="stat-desc">Available Balance</div>
                             </div>
                         </div>
@@ -40,32 +40,34 @@
                     <div>
             
                         <!-- user action btn -->
-                        <button class="btn btn-lg">Add Money</button>
-                        <button class="btn btn-lg">Cash Out</button>
+                        <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                            <form class="card-body">
+                                <div class="form-control">
+                                    <label class="label">
+                                    <span class="label-text">Amount</span>
+                                    </label>
+                                    <input type="number" id="amountNumber" placeholder="Enter Amount" class="input input-bordered" required />
+                                </div>
+                                <div class="form-control">
+                                <label class="label">
+                                    <span class="label-text">4 Digit Pin</span>
+                                </label>
+                                <input type="password" id="pinNumber" placeholder="Enter 4 Digit Pin" class="input input-bordered" autocomplete="off" required />
+                                
+                                </div>
+                            
+                            </form>
+                            </div>
             
                     </div>
                     <div class="divider"></div>
             
                     <!-- add Money form start-->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-                        <form class="card-body">
-                            <div class="form-control">
-                                <label class="label">
-                                <span class="label-text">Amount</span>
-                                </label>
-                                <input type="number" id="amountNumber" placeholder="Enter Amount" class="input input-bordered" required />
-                            </div>
-                            <div class="form-control">
-                            <label class="label">
-                                <span class="label-text">4 Digit Pin</span>
-                            </label>
-                            <input type="password" id="pinNumber" placeholder="Enter 4 Digit Pin" class="input input-bordered" autocomplete="off" required />
-                            
-                            </div>
-                          <div class="form-control mt-6">
-                            <button id="addMoneyBtn" class="btn btn-primary">Add Money</button>
-                          </div>
-                        </form>
+                    
+
+                        <div>
+                            <button id="addMoneyBtn" class="btn btn-lg">Add Money</button>
+                            <button id="cashOut" class="btn btn-lg">Cash Out</button>
                         </div>
                     </div>
                     <!-- add Money form end-->
